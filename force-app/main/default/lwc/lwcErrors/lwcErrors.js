@@ -3,7 +3,7 @@ import { reduceErrors } from 'c/ldsUtils';
 import getContactsBornAfter from '@salesforce/apex/AccountController.getContactsBornAfter';
 export default class WireApexFunction extends LightningElement {
     @api minBirthDate;
-    errors;
+    errors; 
     @wire(getContactsBornAfter, { birthDate: '$minBirthDate' })
     wiredContacts({data, error}) {
         if (error)
