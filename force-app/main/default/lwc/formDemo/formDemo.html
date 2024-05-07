@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <!-- remember this is linked to an object-->
+        <lightning-record-form
+        object-api-name={objectApiName}
+        onsuccess={handleSuccess} 
+        fields={fields}
+        onerror={showErrorToast}
+        >
+
+        </lightning-record-form>
+    </lightning-card>
+</template>
